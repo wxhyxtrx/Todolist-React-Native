@@ -48,7 +48,7 @@ const Login = ({ navigation }) => {
         <Box bgColor="white" height="full" safeArea alignItems="center" justifyContent="center" >
             <StatusBar />
             <Box mt="20">
-                <Image source={require("../../assets/login.png")} size="2xl" alt="Alternate Text" mb="0" />
+                <Image source={require("../../assets/login.png")} size="xl" alt="Alternate Text" mb="0" />
             </Box>
             <FormControl isRequired w="80">
                 <Text fontSize="3xl" fontWeight="bold" mb="5" color="muted.700">Login</Text>

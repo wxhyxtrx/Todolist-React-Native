@@ -96,8 +96,8 @@ const Register = ({ navigation }) => {
     return (
         <Box bgColor="white" safeArea flex={1} justifyContent="center" alignItems="center">
             <StatusBar />
-            <Box mt="24">
-                <Image source={require("../../assets/register.png")} size="2xl" alt="Alternate Text" margin="auto" mb="0" />
+            <Box mt="16">
+                <Image source={require("../../assets/register.png")} size="xl" alt="Alternate Text" margin="auto" mb="0" />
             </Box>
             <FormControl isRequired w="80">
                 <Text fontSize="3xl" fontWeight="bold" color="muted.700">Register</Text>
@@ -135,7 +135,7 @@ const Register = ({ navigation }) => {
                 </VStack>
             </FormControl>
             <Button mt="10" size="lg" backgroundColor="lightBlue.800" w="80" onPress={(e) => handleSubmit.mutate(e)}>
-                <Text color="white" fontSize="xl" >Resgiter</Text>
+                <Text color="white" fontSize="xl" >Register</Text>
             </Button>
             <Text mt="5" textAlign="center" fontSize="lg">I have account? <Text fontWeight="bold" color="lightBlue.600" onPress={() => navigation.navigate("login")}>Login</Text></Text>
 

@@ -5,8 +5,8 @@ const Home = ({ navigation }) => {
     return (
         <Box bg="white" height="full" safeArea >
             <StatusBar />
-            <Box alignItems="center" marginTop="32">
-                <Image source={require("../../assets/banner.png")} alt="Alternate Text" size="2xl" />
+            <Box alignItems="center" marginTop="20">
+                <Image source={require("../../assets/banner.png")} alt="Alternate Text" size="xl" />
             </Box>
             <Box alignItems="center">
                 <HStack marginTop={5}>

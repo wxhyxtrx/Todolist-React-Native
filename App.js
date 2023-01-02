@@ -1,20 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native'
+import { NativeBaseProvider } from 'native-base'
+// import { LogBox } from "react-native";
+import Router from './src/router';
+import { QueryClient, QueryClientProvider } from "react-query";
+import { UserContextProvider } from "./src/context/usercontext";
 
+// LogBox.ignoreAllLogs();
 export default function App() {
+  const client = new QueryClient();
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <QueryClientProvider client={client}>
+        <NativeBaseProvider>
+          <UserContextProvider>
+            <Router />
+          </UserContextProvider>
+        </NativeBaseProvider>
+      </QueryClientProvider >
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
